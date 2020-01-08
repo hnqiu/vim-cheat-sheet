@@ -3,6 +3,7 @@
 ## Tips
 - Many of the commands can use a `number` prefix as the times of repeating the command.
 - Some commands (e.g., `o`, `i`, `p`) have upper & lower cases. The upper ones operate (open, insert, paste) before or on top of the cursor; the lower ones operate after the cursor.
+- Command `d` and `c` are very similar. The only difference is `c` will enter the insert mode after characters are deleted.
 - Map key bindings in [Vim](http://vimdoc.sourceforge.net/htmldoc/map.html) & [VSCode Vim extention](https://github.com/VSCodeVim/Vim#key-remapping).
 
 ## Global
@@ -92,6 +93,7 @@ yy # copy a line
 ye # yank from current to the end of the word (including the end)
 yw # yank from current to the start of the next (without the next word)
 dd # cut a line
+di( / di{ / di[ # delete in parenthesis: delete contents within () / {} / []
 D/d$ # cut to the end of a line
 p # paste after cursor
 P # uppercase: paste before cursor
@@ -101,10 +103,12 @@ x # cut a character
 
 ## Editing
 ```sh
-r # replace a character
+r/R # replace a character(s)
 s # substitute: delete a character and switch to insert mode
 cw # change (delete) to the end of the word and switch to insert mode
 ciw # delete the current word and switch to insert mode
+ci( / ci{ / ci[ # change in parenthesis: substitude contents within () / {} / []
+C/C$ # cut to the end of a line and switch to insert mode
 S/cc # clear the current line and switch to insert mode
 J # join line below to current with one space in between
 ```
