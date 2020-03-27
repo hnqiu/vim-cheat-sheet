@@ -103,6 +103,7 @@ x # cut a character
 
 ## Editing
 ```sh
+~ # switch case
 r/R # replace a character(s)
 s # substitute: delete a character and switch to insert mode
 cw # change (delete) to the end of the word and switch to insert mode
@@ -135,7 +136,7 @@ o/O # switch between the ends of marked area
 y # yank marked text
 d # cut marked text
 c # delete marked text and switch to insert mode
-~ # switch case
+U/u # switch to upper/lower case
 ```
 
 ## VSCodeVim
@@ -161,6 +162,7 @@ $ # move cursor to the end of this line
 0 # move cursor to the beginning of this line
 - # move cursor to the beginning of the previous line
 / # find pattern
+~ # switch case
 ```
 
 ## Example
